@@ -27,11 +27,11 @@ Router.map(function() {
     path: '/out/:_id',
     where: 'server',
     action: function() {
-      console.log('api route called');
       apiResponse = Apis.findOne(this.params._id);
       console.log('apiResponse: ' + JSON.stringify(apiResponse));
       this.response.writeHead(apiResponse.status, apiResponse.headers);
       this.response.end(JSON.stringify(apiResponse.body));
+      console.log('api served with the id: ' + apiResponse._id);
     }
   });
 
@@ -40,8 +40,10 @@ Router.map(function() {
     path: '/apiCreate',
     where: 'server',
     action: function() {
-      console.log('apiCreate route called');
-      this.response.end(Apis.insert(this.request.body));
+      var _id = Apis.insert(this.request.body);
+      this.response.end(_id);
+      console.log('api created with the id: ' + _id);
+      
     }
   });
 
