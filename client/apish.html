@@ -16,13 +16,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">api.sh ➜ coming soon</a>
+        <a class="navbar-brand" href="#">api.sh ➜ pre beta</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">#</a></li>
+          <li class="active"><a href="/ow/sample">api.sh/ow/sample</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -47,7 +47,6 @@
 <template name="smstexts">
   <div class="container-fluid">
     {{> featurette}}
-    {{> requestInviteRepeatBanner}}
     
   </div>
   
@@ -159,7 +158,7 @@
       <div class="row-fluid">  
         <div class="jumbotron">
           <h1 align="center">
-            Yes, now I want in.
+            Start building apps faster.
           </h1>
           <p align="center">
             <a href="#requestInvite" role="button" class="btn btn-primary btn-lg open-modal" >Request an invite!</a>  
@@ -178,7 +177,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h3 class="modal-title">api.sh ➜ <span class="label label-success">by invitaion only</span></h3>
+          <h3 class="modal-title">api.sh ➜ <span class="label label-success">pre beta invitaion</span></h3>
         </div>
         <form>
           <div class="modal-body">
@@ -219,26 +218,27 @@
         <!--<img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">-->
       </div>
       <div>
-        <h2 class="featurette-heading" align="center">...or wanted to create <span class="text-muted">Static APIs?</span></h2>
+        <h2 class="featurette-heading" align="center">...or create <span class="text-muted">Static APIs?</span></h2>
+        <h4 align="center"><a href="/ow/sample"> api.sh/ow/sample</a></h4>
         <!--<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>-->
       </div>
-    </div>
-
-    <hr class="featurette-divider">
+    </div><!-- /END THE FEATURETTES -->
     
+    <hr class="featurette-divider">
+
     <div class="row featurette">
-      <div>
-        <h2 class="featurette-heading" align="center">Request invite now and start building Apps faster!<span class="text-muted"></span></h2>
-        <!--<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>-->
-      </div>
       <div class="col-md-5">
         <!--<img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">-->
       </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-  <!-- /END THE FEATURETTES -->
+      <div>
+        <h2 class="featurette-heading"  align="center">
+          <span class="text-muted">api.sh </span> lets you start building apps even faster.
+          <br>
+          <br>
+        </h2>
+        <!--<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>-->
+      </div>
+    </div><!-- /END THE FEATURETTES -->
   </div><!-- /.container -->
   
 </template>
@@ -247,8 +247,8 @@
 <!-- FOOTER -->
   <div class="container">
     <footer>
-      <p class="pull-right"><a href="#">Back to top</a></p>
-      <p>&copy; 2014 api.sh, &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      <p class="pull-right"><!--a href="#">Back to top</a--></p>
+      <p align="center">&copy; 2014 api.sh<!--a href="#">Privacy</a> &middot; <a href="#">Terms</a--></p>
     </footer>
   </div><!-- /.container -->
 </template>

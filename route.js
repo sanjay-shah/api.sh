@@ -22,12 +22,17 @@ Router.map(function() {
     }
   });
 
-  this.route('out', {
-    template: 'out',
-    path: '/out/:_id',
+  this.route('ow', {
+    template: 'ow',
+    path: '/ow/:_id',
     where: 'server',
     action: function() {
-      apiResponse = Apis.findOne(this.params._id);
+      if (this.params._id == 'sample') {
+        apiResponse = Apis.findOne('sample');
+      } else {
+        apiResponse = Apis.findOne(this.params._id);
+      }
+      
       console.log('apiResponse: ' + JSON.stringify(apiResponse));
       this.response.writeHead(apiResponse.status, apiResponse.headers);
       this.response.end(JSON.stringify(apiResponse.body));
