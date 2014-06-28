@@ -1,0 +1,255 @@
+<head>
+  <title>api.sh ➜ mock your api</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+
+<body>
+  
+  
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">api.sh ➜ coming soon</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">#</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  
+  {{> requestInviteBanner}}
+  {{> requestInviteModal}} 
+  {{!--> addApi--}} 
+  
+  {{!--> api--}} 
+  
+</body>
+
+<template name="notFound">
+  <h1>Page not found!</h1>
+</template>
+
+<template name="loading">
+  <h1>loading...</h1>
+</template>
+
+<template name="smstexts">
+  <div class="container-fluid">
+    {{> featurette}}
+    {{> requestInviteRepeatBanner}}
+    
+  </div>
+  
+  {{> footer}}
+</template>
+
+<template name="addApi">
+   <form>
+     <div class="input-group input-group-lg">
+       <span class="input-group-addon">Status</span>
+       <input id="status-code" type="text" class="form-control" placeholder="200">
+       <span class="input-group-addon">Headers</span>
+       <input id="headers" type="textarea" class="form-control" placeholder="{'Content-type': 'application/json'}">
+     </div>
+     <div class="input-group input-group-lg">
+       <span class="input-group-addon">Body</span>
+       <input id="body" type="text" class="form-control" placeholder="{'message': 'my_api_with_headers_and_status'}">
+     </div>
+     
+     <button class="btn btn-lg" data-dismiss="modal" aria-hidden="true">Cancel</button>
+     <button class="btn btn-primary btn-lg close-modal">Join waitlist!</button>
+     
+   </form>
+   
+   <pre><textarea name="body" rows="8" cols="40"><code class="language-css">{'message': 'my_api_with_headers_and_status'}</code></textarea></pre>
+   
+   <code class="language-json">{'message': 'my_api_with_headers_and_status'}</code>
+</template>
+
+<template name="smstextListItem">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><span><a href="#">{{From}}</a></span></h3>
+      </div>
+      <div class="panel-body">
+        <p>{{Body}}</p>
+        
+      </div>
+    </div>
+</template>
+
+<template name="api">
+	<div class="code">
+		{{#sh_highlight lang="js"}}
+      {
+          "glossary": {
+              "title": "example glossary",
+      		"GlossDiv": {
+                  "title": "S",
+      			"GlossList": {
+                      "GlossEntry": {
+                          "ID": "SGML",
+      					"SortAs": "SGML",
+      					"GlossTerm": "Standard Generalized Markup Language",
+      					"Acronym": "SGML",
+      					"Abbrev": "ISO 8879:1986",
+      					"GlossDef": {
+                              "para": "A meta-markup language, used to create markup languages such as DocBook.",
+      						"GlossSeeAlso": ["GML", "XML"]
+                          },
+      					"GlossSee": "markup"
+                      }
+                  }
+              }
+          }
+      }
+			
+		{{/sh_highlight}}
+	</div>
+
+	<div class="code" style="margin-top: 10px">
+		{{#sh_highlight lang="js"}}
+			Template.Scrollview.items = function() {
+			  return Items.find({}, {sort: {name: 1}});
+			}
+		{{/sh_highlight}}
+	</div>
+</template>
+
+<template name="map">
+    <div id="container">
+      <h3 class="title">Geo locate your callers</h3>
+      <div id="map" class="map"></div>
+      <div class="notice">
+        I'm working on this bug now...<br>
+        Resize the window to get a preview of geo location.
+      </div>
+    </div>
+</template>
+
+<template name="requestInviteBanner">
+  <div class="container-fluid">
+      <div class="row-fluid">  
+        <div class="jumbotron">
+          <h1 align="center">
+            Want in?
+          </h1>
+          <p align="center">
+            <a href="#requestInvite" role="button" class="btn btn-primary btn-lg open-modal" >Request an invite!</a>  
+          </p>
+          <p align="center">api.sh ➜ mock your APIs</p>
+        </div>
+      </div>
+  </div>
+</template>
+
+<template name="requestInviteRepeatBanner">
+  <div class="container-fluid">
+      <div class="row-fluid">  
+        <div class="jumbotron">
+          <h1 align="center">
+            Yes, now I want in.
+          </h1>
+          <p align="center">
+            <a href="#requestInvite" role="button" class="btn btn-primary btn-lg open-modal" >Request an invite!</a>  
+          </p>
+          <p align="center">api.sh ➜ mock your APIs</p>
+        </div>
+      </div>
+  </div>
+</template>
+
+  
+  <!-- A modal that contains the bigger view of the image selected -->
+<template name="requestInviteModal">
+  <div class="modal fade in" id="requestInviteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3 class="modal-title">api.sh ➜ <span class="label label-success">by invitaion only</span></h3>
+        </div>
+        <form>
+          <div class="modal-body">
+              <div class="input-group input-group-lg">
+                <span class="input-group-addon">email </span>
+                <input id="email" type="text" class="form-control" placeholder="user@example.com">
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-lg" data-dismiss="modal" aria-hidden="true">Cancel</button>
+            <button class="btn btn-primary btn-lg close-modal">Request invite now!</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="featurette">
+  <!-- START THE FEATURETTES -->
+  <div class="container">
+    
+
+    <div class="row featurette">
+      <div>
+        <h2 class="featurette-heading" align="center">Ever wished to <span class="text-muted">mock APIs</span> instantly...</h2>
+        <!--<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>-->
+      </div>
+      <div class="col-md-5">
+        <!--<img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">-->
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-5">
+        <!--<img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">-->
+      </div>
+      <div>
+        <h2 class="featurette-heading" align="center">...or wanted to create <span class="text-muted">Static APIs?</span></h2>
+        <!--<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>-->
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+    
+    <div class="row featurette">
+      <div>
+        <h2 class="featurette-heading" align="center">Request invite now and start building Apps faster!<span class="text-muted"></span></h2>
+        <!--<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>-->
+      </div>
+      <div class="col-md-5">
+        <!--<img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">-->
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+  <!-- /END THE FEATURETTES -->
+  </div><!-- /.container -->
+  
+</template>
+
+<template name="footer">
+<!-- FOOTER -->
+  <div class="container">
+    <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+      <p>&copy; 2014 api.sh, &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+  </div><!-- /.container -->
+</template>
+
