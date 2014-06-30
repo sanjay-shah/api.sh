@@ -1,5 +1,7 @@
 //Apis = new Meteor.Collection('apis');
 Invitees = new Meteor.Collection('invitees');
+Faker = Meteor.require('Faker');
+
 
 Meteor.methods({
   addInvitees: function (invitee) {

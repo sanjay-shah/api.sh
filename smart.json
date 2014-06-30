@@ -2,7 +2,7 @@
   "packages": {
     "iron-router": {},
     "bootstrap-3": {},
-    "codemirror": {},
-    "SyntaxHighlighter": {}
+    "SyntaxHighlighter": {},
+    "npm": {}
   }
 }

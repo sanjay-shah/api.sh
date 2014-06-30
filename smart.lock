@@ -4,8 +4,8 @@
     "basePackages": {
       "iron-router": {},
       "bootstrap-3": {},
-      "codemirror": {},
-      "SyntaxHighlighter": {}
+      "SyntaxHighlighter": {},
+      "npm": {}
     },
     "packages": {
       "iron-router": {
@@ -18,15 +18,15 @@
         "tag": "v3.1.1-1",
         "commit": "63dd38968828bb8963636df93e9a1c45e2dfe67e"
       },
-      "codemirror": {
-        "git": "https://github.com/digioak/meteor-codemirror.git",
-        "tag": "v0.0.2",
-        "commit": "39185b6e97c485e7cd65a2ef84190923c050b0d8"
-      },
       "SyntaxHighlighter": {
         "git": "https://github.com/gadicohen/meteor-SyntaxHighlighter.git",
         "tag": "v3.0.83-9",
         "commit": "5dbcd9180a3ea16055e5ecf795e6b1da2c4be6ce"
+      },
+      "npm": {
+        "git": "https://github.com/arunoda/meteor-npm.git",
+        "tag": "v0.2.6",
+        "commit": "177ab6118de5bf8cffb19481343d5762ff7a2aaf"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

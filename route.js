@@ -22,13 +22,19 @@ Router.map(function() {
     }
   });
 
-  this.route('ow', {
-    template: 'ow',
+  this.route('apiShow', {
+    template: 'apiShow',
     path: '/ow/:_id',
     where: 'server',
     action: function() {
       if (this.params._id == 'sample') {
+        //sampleCustomer = {};
+        //sampleCustomer.email = Faker.Internet.email();
         apiResponse = Apis.findOne('sample');
+        //apiResponse.body.email = Faker.Internet.email();
+        apiResponse.body = Faker.Helpers.userCard();
+        apiResponse.body.INFO = 'REFRESH THE PAGE TO SEE DYNAMIC API RESPONSE';
+        //apiResponse = sampleCustomer;
       } else {
         apiResponse = Apis.findOne(this.params._id);
       }

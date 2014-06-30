@@ -32,7 +32,7 @@
   {{> requestInviteModal}} 
   {{!--> addApi--}} 
   
-  {{!--> api--}} 
+  {{> sampleApi}} 
   
 </body>
 
@@ -88,40 +88,14 @@
     </div>
 </template>
 
-<template name="api">
-	<div class="code">
-		{{#sh_highlight lang="js"}}
-      {
-          "glossary": {
-              "title": "example glossary",
-      		"GlossDiv": {
-                  "title": "S",
-      			"GlossList": {
-                      "GlossEntry": {
-                          "ID": "SGML",
-      					"SortAs": "SGML",
-      					"GlossTerm": "Standard Generalized Markup Language",
-      					"Acronym": "SGML",
-      					"Abbrev": "ISO 8879:1986",
-      					"GlossDef": {
-                              "para": "A meta-markup language, used to create markup languages such as DocBook.",
-      						"GlossSeeAlso": ["GML", "XML"]
-                          },
-      					"GlossSee": "markup"
-                      }
-                  }
-              }
-          }
-      }
-			
-		{{/sh_highlight}}
-	</div>
-
+<template name="sampleApi">
+  <a href="#refreshApi" align="center" role="button" class="btn btn-primary btn-lg show-sample" >Try it now!</a>
+  <br>
+  <textarea>{{sampleResponse.content}}</textarea>
 	<div class="code" style="margin-top: 10px">
+    
 		{{#sh_highlight lang="js"}}
-			Template.Scrollview.items = function() {
-			  return Items.find({}, {sort: {name: 1}});
-			}
+      {{sampleResponse}}
 		{{/sh_highlight}}
 	</div>
 </template>
