@@ -61,20 +61,31 @@ Template.sampleApi.events = {
       function(error, result) {
         if (!error) {
           Session.set("sampleResponse", result);
+          //var myCodeMirror = CodeMirror.fromTextArea(e.find('textarea'));
           console.log("result: " + JSON.stringify(result));
         }
       });
+      e.stopPropagation();
+      return true;
   }
 };
 
 Template.sampleApi.rendered = function(){
     // Make the textarea highlight the code (kind of).
-    var myCodeMirror = CodeMirror.fromTextArea(this.find('textarea'))
+    console.log("sampleApi.rendered" );
+    //var myCodeMirror = CodeMirror.fromTextArea(this.find('textarea'));
 }
 
 
 Template.sampleApi.helpers({
   sampleResponse: function() {
+    console.log("statusCode:" + Session.get("sampleResponse").statusCode);
     return Session.get("sampleResponse");
+  },
+  headers: function() {
+    return JSON.stringify(Session.get("sampleResponse").headers);
+  },
+  statusCode: function() {
+    return Session.get("sampleResponse").statusCode;
   }
 });

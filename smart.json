@@ -3,6 +3,7 @@
     "iron-router": {},
     "bootstrap-3": {},
     "SyntaxHighlighter": {},
-    "npm": {}
+    "npm": {},
+    "codemirror": {}
   }
 }

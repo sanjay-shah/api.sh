@@ -28,11 +28,16 @@ Router.map(function() {
     where: 'server',
     action: function() {
       if (this.params._id == 'sample') {
-        //sampleCustomer = {};
-        //sampleCustomer.email = Faker.Internet.email();
-        apiResponse = Apis.findOne('sample');
-        //apiResponse.body.email = Faker.Internet.email();
+        apiResponse = {};
+        apiResponse.status = "200";
+        apiResponse.headers = {
+          "myheader": "header-unlimited",
+          "Content-Type": "application/json"
+        };
+        
         apiResponse.body = Faker.Helpers.userCard();
+        
+        
         apiResponse.body.INFO = 'REFRESH THE PAGE TO SEE DYNAMIC API RESPONSE';
         //apiResponse = sampleCustomer;
       } else {

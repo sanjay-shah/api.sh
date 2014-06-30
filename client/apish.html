@@ -89,14 +89,33 @@
 </template>
 
 <template name="sampleApi">
-  <a href="#refreshApi" align="center" role="button" class="btn btn-primary btn-lg show-sample" >Try it now!</a>
+  
   <br>
-  <textarea>{{sampleResponse.content}}</textarea>
 	<div class="code" style="margin-top: 10px">
+    <div class="input-group input-group-lg">
+      <div class="input-group-btn">
+        <a href="#refreshApi" align="center" role="button" class="btn btn-primary btn-lg show-sample" >GET</a>
+      </div>
+      <input type="text" class="form-control" placeholder="http//api.sh/ow/sample">
+    </div>
     
-		{{#sh_highlight lang="js"}}
-      {{sampleResponse}}
-		{{/sh_highlight}}
+    
+    <div class="input-group input-group-lg">
+      <span class="input-group-addon">Status Code</span>
+      <textarea class="form-control">{{sampleResponse.statusCode}}</textarea>
+    </div>
+    
+    <div class="input-group input-group-lg">
+      <span class="input-group-addon">Headers</span>
+      <textarea class="form-control">{{headers}}</textarea>
+    </div>
+    
+    <div class="input-group input-group-lg">
+      <span class="input-group-addon">Response</span>
+      <textarea class="form-control" row="10">{{sampleResponse.content}}</textarea>
+    </div>
+    
+		
 	</div>
 </template>
 
