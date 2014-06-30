@@ -69,7 +69,7 @@ Template.sampleApi.events = {
 
 Template.sampleApi.rendered = function(){
     // Make the textarea highlight the code (kind of).
-    //var myCodeMirror = CodeMirror.fromTextArea(this.find('textarea'))
+    var myCodeMirror = CodeMirror.fromTextArea(this.find('textarea'))
 }
 
 

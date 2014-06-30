@@ -1,6 +1,7 @@
 //Apis = new Meteor.Collection('apis');
 Invitees = new Meteor.Collection('invitees');
 Faker = Meteor.require('Faker');
+//CodeMirror = Meteor.require('codemirror');
 
 
 Meteor.methods({
